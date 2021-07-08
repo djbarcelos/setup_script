@@ -2,4 +2,4 @@
 set -e
 
 clear
-sudo snap install postman -y
+sudo snap install postman

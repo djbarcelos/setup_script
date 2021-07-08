@@ -60,7 +60,7 @@ compass() {
 postman() {
     # install Postman
     NAME_INSTALL="Postman"
-  sudo snap install postman -y
+  sudo snap install postman
   message
 }
 
