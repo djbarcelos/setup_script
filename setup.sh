@@ -10,9 +10,11 @@ NAME_INSTALL=""
 #Functions
 start() {
     #Prerequisites
-  sudo apt-get update
+    NAME_INSTALL="wget, npm"
+#   sudo apt update
   sudo apt install wget
   sudo apt install npm
+  message
 }
 node() {
     # install NodeJS LTS

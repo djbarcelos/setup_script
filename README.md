@@ -3,6 +3,7 @@ Script de configuração do ambiente de desenvolvimento.
 
 # COMANDO DE EXECUÇÃO
 curl https://raw.githubusercontent.com/djbarcelos/setup_script/main/setup.sh | sh    
+curl https://cutt.ly/lmQjflM | sh    
 
 # Releases 1.0 
 --> NodeJS
