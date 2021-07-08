@@ -10,10 +10,10 @@ NAME_INSTALL=""
 #Functions
 start() {
     #Prerequisites
-    NAME_INSTALL="wget, npm"
+    NAME_INSTALL="wget"
 #   sudo apt update
   sudo apt install wget
-  sudo apt install npm
+# sudo apt install npm
   message
 }
 node() {
@@ -21,6 +21,7 @@ node() {
     NAME_INSTALL="NodeJS"
   curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
   sudo bash nodesource_setup.sh
+  sudo apt update
   sudo apt install nodejs -y
   message
 }
@@ -66,7 +67,7 @@ postman() {
 message() {
   clear
   echo "# Instalação do $NAME_INSTALL finalizada\n# Versão: $VERSION\n# Desenvolvedor: $DEVELOPER "
-  for i in $(seq 1 1 5);
+  for i in $(seq 1 1 3);
   do # Faça
   echo -n "."
   sleep 01
