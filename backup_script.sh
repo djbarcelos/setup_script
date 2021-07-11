@@ -229,7 +229,7 @@ npm() {
 sair() {
 	rm -rf setup.sh
 	clear
-	exit;;
+	exit
 }
 
 #Menu
