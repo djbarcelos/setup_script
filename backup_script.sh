@@ -30,11 +30,12 @@ finish
 }
 
 docker() {
-clear
-sudo apt-get update
-sudo apt install curl
-curl -fsSl https://get.docker.com | sh
-finish
+	clear
+	sudo apt-get update
+	sudo apt install curl
+	curl -fsSl https://get.docker.com | sh
+	sudo usermod -aG docker ${USER}
+	finish
 }
 
 mongo() {
@@ -69,11 +70,11 @@ esac
 }
 
 nodeJS(){
-clear
-sudo apt update 
-sudo apt upgrade
-sudo apt install nodejs
-nvm install v14.15.1
+  clear
+  curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+  sudo bash nodesource_setup.sh
+  sudo apt update
+  sudo apt install nodejs -y
 echo -n "NodeJS"; nodejs -v
 
 finish
@@ -219,6 +220,12 @@ sudo apt update
 finish
 }
 
+npm() {
+	clear 
+	sudo apt install npm
+	finish
+}
+
 #Menu
 menu () {
 clear
@@ -238,6 +245,7 @@ echo "12. Gnome"
 echo "13. Angular"
 echo "14. Compass"
 echo "15. Postman"
+echo "16. NPM"
 echo -n "Opção: "
 read OPC
 case $OPC in
@@ -290,6 +298,9 @@ case $OPC in
 	15) postman
 	menu;;
 #
+	15) npm
+	menu;;
+#
 	*)clear; 
 	exit;;
 esac
@@ -301,9 +312,9 @@ clear
 echo "-----------------------"
 echo "|       Bem Vindo     |"
 echo "-----------------------"
-echo " Versão: 0.0.1 "
+echo " Versão: 0.1.2 "
 echo " Dev: Diogo Jorge "
-echo " Ultima atualização: 25 / 03 / 2021 "
+echo " Ultima atualização: 11 / 07 / 2021 "
 read stop
 menu
 clear
