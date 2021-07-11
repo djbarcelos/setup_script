@@ -226,6 +226,12 @@ npm() {
 	finish
 }
 
+sair() {
+	rm -rf setup.sh
+	clear
+	exit;;
+}
+
 #Menu
 menu () {
 clear
@@ -246,6 +252,7 @@ echo "13. Angular"
 echo "14. Compass"
 echo "15. Postman"
 echo "16. NPM"
+echo " s. Sair"
 echo -n "Opção: "
 read OPC
 case $OPC in
@@ -298,7 +305,10 @@ case $OPC in
 	15) postman
 	menu;;
 #
-	15) npm
+	16) npm
+	menu;;
+#
+	s) sair
 	menu;;
 #
 	*)clear; 
